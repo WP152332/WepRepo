@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function sum() {
+        N = document.getElementById("value").value;
+        CNT = 0;
+        for (i = 1; i <= N; i++) {
+          CNT += i;
+        }
+        document.getElementById("print").innerHTML = "1부터 " + N + "까지의 합은 " + CNT + "입니다.";
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="value">
+  <input type="button" id="sum" value="계산" onclick="sum();">
+  <p id="print"></p>
+</body>
+</html>

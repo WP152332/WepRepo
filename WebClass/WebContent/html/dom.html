@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="div1">
+    <p id="p1">원래 있던 거거든</p>
+  </div>
+  <script>
+    var newnode = document.createElement("p");
+    var newtext = document.createTextNode("새로 만든 거거든");
+    newnode.appendChild(newtext);
+    var div = document.getElementById("div1");
+    div.appendChild(newnode);
+    var p1 = document.getElementById("p1");
+    div.removeChild(p1);
+  </script>
+</body>
+</html>

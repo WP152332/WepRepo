@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>프로필</h1>
+  <p id="profile"></p>
+</body>
+</html>
+<script>
+  var id = "2332";
+  var name = "최준용";
+  var age = 18;
+  var height = 172;
+  var hobby = ["탁구", "게임"];
+  document.getElementById("profile").innerHTML =
+  "<ul><li>학번 " + id + "</li>" +
+  "<li>이름 " + name + "</li>" +
+  "<li>나이 " + age + "세</li>" +
+  "<li>키 " + height + "cm</li>" +
+  "<li>취미 " + hobby + "</li>" +
+  "</ul>";
+</script>
