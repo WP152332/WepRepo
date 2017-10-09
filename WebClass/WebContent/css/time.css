@@ -1,0 +1,43 @@
+.div-inline {
+  background: #212529;
+}
+
+div {
+  text-align: center;
+  color: white;
+}
+
+table, tr, td {
+  border: 1px solid white;
+}
+
+table {
+  margin: 0% 5%;
+  width: 90%;
+  height: 100%;
+  font-size: 1.7em;
+}
+
+.div-inline h1 {
+  margin: 3.5% 35%;
+  width: 30%;
+  color: white;
+  padding: 1%;
+  border-bottom: 5px solid rgba(255, 255, 255, 1);
+}
+
+#Cont {
+  margin: 0% 10%;
+  width: 80%;
+}
+
+.tag {
+  text-align: center;
+  margin-top: 1%;
+  color: white;
+}
+
+.div-inline {
+  background: #212529;
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+.div-inline {
+  background: #212529;
+}
+
+div {
+  text-align: center;
+}
+
+#img {
+  margin-top: 7.5%;
+  margin-bottom: 5%;
+}
+
+#img img{
+  border-radius: 100%;
+}
+
+.tag {
+  text-align: center;
+  margin-top: 1%;
+  color: white;
+}
