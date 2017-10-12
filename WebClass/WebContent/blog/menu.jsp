@@ -48,7 +48,7 @@
 	      </a>
 	      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
 	      	<form action="/WebClass/bloglogout" method="post">
-		      	<button type="submit" class="dropdown-item"">Sign out</button>
+		      	<button type="submit" class="dropdown-item">Sign out</button>
 	      	</form>
 	      </div>
 	    </li>

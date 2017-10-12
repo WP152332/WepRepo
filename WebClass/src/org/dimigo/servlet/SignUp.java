@@ -1,6 +1,7 @@
 package org.dimigo.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.dimigo.vo.UserVO;
+
+import com.google.gson.JsonObject;
 
 /**
  * Servlet implementation class SignUp
@@ -46,8 +49,22 @@ public class SignUp extends HttpServlet {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pwd");
 		String name = request.getParameter("name");
-		String nn = request.getParameter("nickname");
-		System.out.println("id : " + id + " pwd = " + pw + " name = " + name + " nickname = " + nn);
+		String nn = request.getParameter("nn");
+		
+		response.setContentType("application/json");
+		response.setCharacterEncoding("utf-8");
+		
+		PrintWriter out = response.getWriter();
+		
+		JsonObject obj = new JsonObject();
+		obj.addProperty("id", id);
+		obj.addProperty("pwd", pw);
+		obj.addProperty("name", name);
+		obj.addProperty("nn", nn);
+		System.out.println(obj.toString());
+		out.write(obj.toString());
+		out.close();
+		
 		boolean result = true;
 		if(result) {
 			HttpSession session = request.getSession();
@@ -58,17 +75,10 @@ public class SignUp extends HttpServlet {
 			session.setAttribute("U", U);
 
 			RequestDispatcher rd = request.getRequestDispatcher("jsp/login.jsp");
-			rd.forward(request, response);
 		} else {
-			UserVO U = new UserVO();
-			U.setId(id);
-			U.setName(name);
-			U.setNickname(nn);
-			request.setAttribute("U", U);
 			request.setAttribute("msg", "error");
-			RequestDispatcher rd = request.getRequestDispatcher("jsp/signup.jsp");
-			rd.forward(request, response);
 		}
+		
 	}
 
 }

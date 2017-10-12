@@ -33,7 +33,7 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">로그인</button>
         </form>
       </div>
-      <div class="inBox">
+      <div class="inBox">c
         <h1>아직 계정이 없으신가요?</h1><br>
         <form class="form my-2 my-lg-0" id="SF">
           <div id="GRDIV">
