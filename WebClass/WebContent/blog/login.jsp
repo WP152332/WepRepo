@@ -24,12 +24,10 @@
       <div class="inBox">
         <h1>로그인해서 <br> 다양한 컨텐츠를 <br> 즐기세요!</h1><br>
         <form class="form my-2 my-lg-0" action="/WebClass/bloglogin" method="post" id="LF">
-          <input class="form-control mr-sm-2" type="text" placeholder="ID" aria-label="ID" id="id" name="id"
+          <input class="form-control mr-sm-2" type="email" placeholder="ID" aria-label="ID" id="id" name="id"
           <% if(request.getParameter("id") != null) {%>
 		  value="<%= request.getParameter("id")%>" <% } %>  required>
-          <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" id="pwd" name="pwd"
-          <% if(request.getParameter("pwd") != null) {%>
-		  value="<%= request.getParameter("pwd")%>" <% } %>  required>
+          <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" id="pwd" name="pwd" required>
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">로그인</button>
         </form>
       </div>
