@@ -15,7 +15,7 @@ public class ApplyAction implements IAction {
 		try {
 			request.setCharacterEncoding("utf-8");
 			UserVO s = (UserVO)request.getSession().getAttribute("U");
-			if(s == null) throw new Exception("·Î±×ÀÎ ÀÌÈÄ ÀÌ¿ëÇÏ¿© ÁÖ¼¼¿ä.");
+			if(s == null) throw new Exception("ë¡œê·¸ì¸ ì´í›„ ì´ìš©í•˜ì—¬ ì£¼ì„¸ìš”.");
 			String pk = request.getParameter("pk");
 			
 			response.setContentType("application/json");

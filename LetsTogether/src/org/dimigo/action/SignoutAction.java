@@ -12,9 +12,9 @@ import org.dimigo.vo.UserVO;
 public class SignoutAction implements IAction {
 	
 	private void validate(UserVO U) throws Exception {
-		if(CommonUtill.isEmpty(U.getId())) throw new Exception("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		if(CommonUtill.isEmpty(U.getPwd())) throw new Exception("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		if(CommonUtill.isEmpty(U.getName())) throw new Exception("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
+		if(CommonUtill.isEmpty(U.getId())) throw new Exception("ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
+		if(CommonUtill.isEmpty(U.getPwd())) throw new Exception("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
+		if(CommonUtill.isEmpty(U.getName())) throw new Exception("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
 	}
 	
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -28,7 +28,7 @@ public class SignoutAction implements IAction {
 			response.setContentType("application/json");
 			response.setCharacterEncoding("utf-8");
 			
-			if(!(s.getId().equals(id) && s.getName().equals(name) && s.getPwd().equals(pw))) throw new Exception("È¸¿ø Á¤º¸¿Í ÀÔ·Â ³»¿ëÀÌ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
+			if(!(s.getId().equals(id) && s.getName().equals(name) && s.getPwd().equals(pw))) throw new Exception("íšŒì› ì •ë³´ì™€ ì…ë ¥ ë‚´ìš©ì´ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			
 			UserVO U = new UserVO();
 			U.setId(id);

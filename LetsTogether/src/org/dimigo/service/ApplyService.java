@@ -59,7 +59,7 @@ public class ApplyService extends AbstractService {
 			con = getConnection();
 			ApplyDao dao = new ApplyDao(con);
 			if(dao.searchApply(user) != null) {
-				throw new Exception("ÀÌ¹Ì ½ÅÃ»ÇÏ¿´½À´Ï´Ù.");
+				throw new Exception("ì´ë¯¸ ì‹ ì²­í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			}
 			dao.insertApply(user);
 		} finally {

@@ -15,7 +15,7 @@ public abstract class AbstractService {
 			return ds.getConnection();
 		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("DB ¿¬°á¿¡ ½ÇÆĞ Çß½À´Ï´Ù.");
+			throw new Exception("DB ì—°ê²°ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
 		}
 	}
 }

@@ -16,8 +16,8 @@ import org.dimigo.vo.UserVO;
 public class PostingAction implements IAction {
 	
 	private void validate(PostVO U) throws Exception {
-		if(CommonUtill.isEmpty(U.getPosting())) throw new Exception("±ÛÀ» ÀÔ·ÂÇÏ¼¼¿ä");
-		if(CommonUtill.isEmpty(U.getTitle())) throw new Exception("Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+		if(CommonUtill.isEmpty(U.getPosting())) throw new Exception("ê¸€ì„ ì…ë ¥í•˜ì„¸ìš”");
+		if(CommonUtill.isEmpty(U.getTitle())) throw new Exception("ì œëª©ì„ ì…ë ¥í•˜ì„¸ìš”");
 	}
 	
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {

@@ -11,9 +11,9 @@ import org.dimigo.vo.UserVO;
 public class SignupAction implements IAction {
 	
 	private void validate(UserVO U) throws Exception {
-		if(CommonUtill.isEmpty(U.getId())) throw new Exception("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		if(CommonUtill.isEmpty(U.getPwd())) throw new Exception("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		if(CommonUtill.isEmpty(U.getName())) throw new Exception("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
+		if(CommonUtill.isEmpty(U.getId())) throw new Exception("ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
+		if(CommonUtill.isEmpty(U.getPwd())) throw new Exception("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
+		if(CommonUtill.isEmpty(U.getName())) throw new Exception("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
 	}
 	
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {

@@ -70,15 +70,15 @@ public class ActionServlet extends HttpServlet {
 
 	protected void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			// URI°¡/WebClass/login.doÀÎ°æ¿ìlogin¸¸ÃßÃâ
+			// URIê°€/WebClass/login.doì¸ê²½ìš°loginë§Œì¶”ì¶œ
 			String uri = request.getRequestURI();
 			String actionName = request.getRequestURI().substring(uri.lastIndexOf("/") + 1);
 			actionName= actionName.substring(0, actionName.indexOf("."));
 			IAction action = actions.get(actionName);
 			if (action == null) {
-				throw new Exception(actionName + "¿¡ ÇØ´çÇÏ´Â ActionÀÌ ¾ø½À´Ï´Ù.");
+				throw new Exception(actionName + "ì— í•´ë‹¹í•˜ëŠ” Actionì´ ì—†ìŠµë‹ˆë‹¤.");
 			}
-			// ActionÀÇexecute() ½ÇÇà
+			// Actionì˜execute() ì‹¤í–‰
 			action.execute(request, response); 
 			} 
 		catch(Exception e) { 

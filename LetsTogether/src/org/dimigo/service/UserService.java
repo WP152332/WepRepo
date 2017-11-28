@@ -16,7 +16,7 @@ public class UserService extends AbstractService {
 			UserDao dao = new UserDao(con);
 			UserVO result = dao.searchUser(U);
 			if(result == null) {
-				throw new Exception("Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌµğÀÌ°Å³ª ºñ¹Ğ¹øÈ£ ÀÔ´Ï´Ù.");
+				throw new Exception("ID í˜¹ì€ Passwordê°€ ì˜³ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			}
 			
 			return result;
@@ -52,7 +52,7 @@ public class UserService extends AbstractService {
 			UserVO result = dao.searchUserById(user);
 			if(result != null)
 			{
-				throw new Exception("ÀÌ¹Ì »ç¿ëÀÚ°¡ Á¸ÀçÇÕ´Ï´Ù.");
+				throw new Exception("ì´ë¯¸ ì‚¬ìš©ìê°€ ì¡´ì¬í•©ë‹ˆë‹¤.");
 			}
 			dao.insertUser(user);
 			

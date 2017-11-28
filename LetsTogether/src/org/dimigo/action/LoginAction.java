@@ -12,8 +12,8 @@ import org.dimigo.vo.UserVO;
 public class LoginAction implements IAction {
 	
 	private void validate(String id, String pwd) throws Exception {
-		if(CommonUtill.isEmpty(id)) throw new Exception("¾ÆÀÌµğ´Â ¹İµå½Ã ÀÔ·ÂÇØ¾ß ÇÕ´Ï´Ù.");
-		if(CommonUtill.isEmpty(pwd)) throw new Exception("ºñ¹Ğ¹øÈ£´Â ¹İµå½Ã ÀÔ·ÂÇØ¾ß ÇÕ´Ï´Ù.");
+		if(CommonUtill.isEmpty(id)) throw new Exception("ì•„ì´ë””ëŠ” ë°˜ë“œì‹œ ì…ë ¥í•´ì•¼ í•©ë‹ˆë‹¤.");
+		if(CommonUtill.isEmpty(pwd)) throw new Exception("ë¹„ë°€ë²ˆí˜¸ëŠ” ë°˜ë“œì‹œ ì…ë ¥í•´ì•¼ í•©ë‹ˆë‹¤.");
 	}
 	
 	

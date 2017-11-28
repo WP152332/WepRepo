@@ -41,7 +41,7 @@ public class ApplyDao {
 			return result;
 		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("½ÅÃ» Á¶È¸ ½Ã ¿À·ù ¹ß»ı");
+			throw new Exception("ì‹ ì²­ ì¡°íšŒ ì‹œ ì˜¤ë¥˜ ë°œìƒ");
 		} finally {
 			if(rs != null) rs.close();
 			if(pstmt != null) pstmt.close();
@@ -73,7 +73,7 @@ public class ApplyDao {
 			return list;
 		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("½ÅÃ» ¸ñ·Ï Á¶È¸ ½Ã ¿À·ù ¹ß»ı");
+			throw new Exception("ì‹ ì²­ ëª©ë¡ ì¡°íšŒ ì‹œ ì˜¤ë¥˜ ë°œìƒ");
 		} finally {
 			if(rs != null) rs.close();
 			if(pstmt != null) pstmt.close();
@@ -108,7 +108,7 @@ public class ApplyDao {
 			return list;
 		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("½ÅÃ» ¸ñ·Ï Á¶È¸ ½Ã ¿À·ù ¹ß»ı");
+			throw new Exception("ì‹ ì²­ ëª©ë¡ ì¡°íšŒ ì‹œ ì˜¤ë¥˜ ë°œìƒ");
 		} finally {
 			if(rs != null) rs.close();
 			if(pstmt != null) pstmt.close();
@@ -129,10 +129,10 @@ public class ApplyDao {
 			pstmt.setString(3, String.valueOf(U.getPk()));
 			
 			cnt = pstmt.executeUpdate();
-			if(cnt == 0) throw new Exception("½ÅÃ»¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+			if(cnt == 0) throw new Exception("ì‹ ì²­ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
 		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("½ÅÃ» ½Ã ¿À·ù ¹ß»ı");
+			throw new Exception("ì‹ ì²­ ì‹œ ì˜¤ë¥˜ ë°œìƒ");
 		} finally {
 			if(pstmt != null) pstmt.close();
 		}
@@ -153,7 +153,7 @@ public class ApplyDao {
 			cnt = pstmt.executeUpdate();
 		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("½ÅÃ» Ãë¼Ò ½Ã ¿À·ù ¹ß»ı");
+			throw new Exception("ì‹ ì²­ ì·¨ì†Œ ì‹œ ì˜¤ë¥˜ ë°œìƒ");
 		} finally {
 			if(pstmt != null) pstmt.close();
 		}

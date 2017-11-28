@@ -20,7 +20,7 @@ public class MyPageAction implements IAction {
 			String intro = request.getParameter("intro");
 			String etc = request.getParameter("etc");
 			
-			if(!nowpw.equals(s.getPwd())) throw new Exception("ÇöÀç ºñ¹Ğ¹øÈ£°¡ ¿ÇÁö ¾Ê¾Æ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù");
+			if(!nowpw.equals(s.getPwd())) throw new Exception("í˜„ì¬ ë¹„ë°€ë²ˆí˜¸ê°€ ì˜³ì§€ ì•Šì•„ ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤");
 			
 			response.setContentType("application/json");
 			response.setCharacterEncoding("utf-8");

@@ -43,7 +43,7 @@ public class PostDao {
 			return result;
 		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("°Ô½Ã¹° Á¶È¸ ½Ã ¿À·ù ¹ß»ı");
+			throw new Exception("ê²Œì‹œë¬¼ ì¡°íšŒ ì‹œ ì˜¤ë¥˜ ë°œìƒ");
 		} finally {
 			if(rs != null) rs.close();
 			if(pstmt != null) pstmt.close();
@@ -75,7 +75,7 @@ public class PostDao {
 			return result;
 		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("°Ô½Ã¹° Á¶È¸ ½Ã ¿À·ù ¹ß»ı");
+			throw new Exception("ê²Œì‹œë¬¼ ì¡°íšŒ ì‹œ ì˜¤ë¥˜ ë°œìƒ");
 		} finally {
 			if(rs != null) rs.close();
 			if(pstmt != null) pstmt.close();
@@ -109,7 +109,7 @@ public class PostDao {
 			return list;
 		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("°Ô½Ã¹° ¸ñ·Ï Á¶È¸ ½Ã ¿À·ù ¹ß»ı");
+			throw new Exception("ê²Œì‹œë¬¼ ëª©ë¡ ì¡°íšŒ ì‹œ ì˜¤ë¥˜ ë°œìƒ");
 		} finally {
 			if(rs != null) rs.close();
 			if(pstmt != null) pstmt.close();
@@ -131,10 +131,10 @@ public class PostDao {
 			pstmt.setString(4, U.getDate());
 			
 			cnt = pstmt.executeUpdate();
-			if(cnt == 0) throw new Exception("°Ô½Ã¹° µî·Ï¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+			if(cnt == 0) throw new Exception("ê²Œì‹œë¬¼ ë“±ë¡ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
 		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("°Ô½Ã¹° ÀÛ¼º ½Ã ¿À·ù ¹ß»ı");
+			throw new Exception("ê²Œì‹œë¬¼ ì‘ì„± ì‹œ ì˜¤ë¥˜ ë°œìƒ");
 		} finally {
 			if(pstmt != null) pstmt.close();
 		}
@@ -155,7 +155,7 @@ public class PostDao {
 			cnt = pstmt.executeUpdate();
 		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("°Ô½Ã¹° ³»¿ë º¯°æ ½Ã ¿À·ù ¹ß»ı");
+			throw new Exception("ê²Œì‹œë¬¼ ë‚´ìš© ë³€ê²½ ì‹œ ì˜¤ë¥˜ ë°œìƒ");
 		} finally {
 			if(pstmt != null) pstmt.close();
 		}
