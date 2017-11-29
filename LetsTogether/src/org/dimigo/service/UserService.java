@@ -3,6 +3,8 @@ package org.dimigo.service;
 import java.sql.Connection;
 import java.util.List;
 
+import org.dimigo.dao.ApplyDao;
+import org.dimigo.dao.PostDao;
 import org.dimigo.dao.UserDao;
 import org.dimigo.vo.UserVO;
 
@@ -69,9 +71,13 @@ public class UserService extends AbstractService {
 		try { 
 			con = getConnection();
 			
-			UserDao dao = new UserDao(con);
-			
-			dao.deleteUser(user);
+			UserDao Udao = new UserDao(con);
+			PostDao Pdao = new PostDao(con);
+			ApplyDao Apdao = new ApplyDao(con);
+		
+			Apdao.deleteApplyForSignout(user);
+			Pdao.deletePostForSignout(user);
+			Udao.deleteUser(user);
 		} finally {
 			if(con != null) {
 				con.close();

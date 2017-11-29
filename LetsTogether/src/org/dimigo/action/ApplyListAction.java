@@ -6,26 +6,27 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.dimigo.service.PostService;
-import org.dimigo.vo.PostVO;
+import org.dimigo.service.ApplyService;
+import org.dimigo.vo.ApplyVO;
 import org.dimigo.vo.UserVO;
 
-public class PostListAction implements IAction {
+public class ApplyListAction implements IAction {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
-			PostService ps = new PostService();
-			List<PostVO> l = ps.searchPostList();
 			UserVO s = (UserVO)request.getSession().getAttribute("U");
+			ApplyService as = new ApplyService();
+			List<ApplyVO> l = as.searchApplyListByDoapplyid(s.getId());
 			
 			request.setAttribute("u", s);
-			request.setAttribute("post", l);
-			
-			RequestDispatcher rd = request.getRequestDispatcher("jsp/post.jsp");
+			request.setAttribute("apply", l);
+
+			RequestDispatcher rd = request.getRequestDispatcher("jsp/apply.jsp");
 			rd.forward(request, response);	
 		} catch(Exception e) {
 			e.getStackTrace();
 			request.setAttribute("error", e.getMessage());
-			RequestDispatcher rd = request.getRequestDispatcher("jsp/post.jsp");
+			System.out.println(e.getMessage());
+			RequestDispatcher rd = request.getRequestDispatcher("jsp/apply.jsp");
 			rd.forward(request, response);
 		}
 	}

@@ -9,7 +9,7 @@ import org.dimigo.service.PostService;
 import org.dimigo.vo.ApplyVO;
 import org.dimigo.vo.UserVO;
 
-public class ApplyAction implements IAction {
+public class AdmissionAction2 implements IAction {
 	
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
@@ -17,7 +17,7 @@ public class ApplyAction implements IAction {
 			UserVO s = (UserVO)request.getSession().getAttribute("U");
 			if(s == null) throw new Exception("로그인 이후 이용하여 주세요.");
 			String pk = request.getParameter("pk");
-			
+			String dai = request.getParameter("doapplyid");
 			response.setContentType("application/json");
 			response.setCharacterEncoding("utf-8");
 
@@ -25,19 +25,22 @@ public class ApplyAction implements IAction {
 			
 			PostService ps = new PostService();
 			U.setGetapplyid(ps.searchPostByPk(pk).getId());
-			U.setDoapplyid(s.getId());
+			U.setDoapplyid(dai);
 			U.setPk(Integer.parseInt(pk));
 			U.setTitle(ps.searchPostByPk(pk).getTitle());
 			U.setPost(ps.searchPostByPk(pk).getPosting());
-			ApplyService aps = new ApplyService();
-			aps.doapply(U);
+			U.setResult(2);
 			
-			RequestDispatcher rd = request.getRequestDispatcher("/post.do");
+			ApplyService aps = new ApplyService();
+			
+			aps.searchApplyAndUpdate(U);
+			
+			RequestDispatcher rd = request.getRequestDispatcher("/admissionlist.do");
 			rd.forward(request, response);
 		} catch (Exception e) {
 			e.getStackTrace();
 			request.setAttribute("error", e.getMessage());
-			RequestDispatcher rd = request.getRequestDispatcher("/post.do");
+			RequestDispatcher rd = request.getRequestDispatcher("/admissionlist.do");
 			rd.forward(request, response);
 		}
 	}

@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.dimigo.service.PostService;
 import org.dimigo.vo.PostVO;
 
-public class ViewAction implements IAction {
+public class ViewAction3 implements IAction {
 	
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
@@ -25,12 +25,12 @@ public class ViewAction implements IAction {
 			request.setAttribute("title", p.getTitle());
 			request.setAttribute("posting", p.getPosting());
 			
-			RequestDispatcher rd = request.getRequestDispatcher("/post.do");
+			RequestDispatcher rd = request.getRequestDispatcher("/admissionlist.do");
 			rd.forward(request, response);
 		} catch (Exception e) {
 			e.getStackTrace();
 			request.setAttribute("error", e.getMessage());
-			RequestDispatcher rd = request.getRequestDispatcher("/post.do");
+			RequestDispatcher rd = request.getRequestDispatcher("/admissionlist.do");
 			rd.forward(request, response);
 		}
 	}

@@ -22,7 +22,7 @@
 		    		더 보기
 		      	</a>
 		      	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-		      		<a href="${contextPath}/notice.do"><button type="button" class="dropdown-item">공지사항</button></a>
+		      		<a href="${contextPath}/jsp/notice.jsp"><button type="button" class="dropdown-item">공지사항</button></a>
 		        	<button type="button" class="dropdown-item" onclick="location='${contextPath}/jsp/company.jsp'">기업 소개</button>
 		      	</div>
 		    </li>
@@ -46,6 +46,8 @@
 			        	<button type="button" class="dropdown-item" onclick="location='${contextPath}/jsp/sessionInfo.jsp'"><c:out value="${ U.name }"></c:out>님의 마이페이지</button>
 				      	<div class="dropdown-divider"></div>
 				        <button type="button" class="dropdown-item" onclick="location='${contextPath}/jsp/mypage.jsp'">회원 정보 수정</button>
+							<a href="${contextPath}/applylist.do"><button type="button" class="dropdown-item">신청 관리</button></a>
+							<a href="${contextPath}/admissionlist.do"><button type="button" class="dropdown-item">승인 관리</button></a>
 				        <button type="button" class="dropdown-item" onclick="location='${contextPath}/jsp/signout.jsp'">회원 탈퇴</button>
 				      </div>	
 				    </li>

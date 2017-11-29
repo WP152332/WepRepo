@@ -11,7 +11,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style="word-wrap: break-word;">
         ...
       </div>	
       <div class="modal-footer">
