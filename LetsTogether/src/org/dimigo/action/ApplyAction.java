@@ -14,6 +14,8 @@ public class ApplyAction implements IAction {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
 			request.setCharacterEncoding("utf-8");
+			response.setContentType("application/json");
+			response.setCharacterEncoding("utf-8");
 			UserVO s = (UserVO)request.getSession().getAttribute("U");
 			if(s == null) throw new Exception("로그인 이후 이용하여 주세요.");
 			String pk = request.getParameter("pk");

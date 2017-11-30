@@ -13,6 +13,9 @@ import org.dimigo.vo.UserVO;
 public class ApplyListAction implements IAction {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
+			request.setCharacterEncoding("utf-8");
+			response.setContentType("application/json");
+			response.setCharacterEncoding("utf-8");
 			UserVO s = (UserVO)request.getSession().getAttribute("U");
 			ApplyService as = new ApplyService();
 			List<ApplyVO> l = as.searchApplyListByDoapplyid(s.getId());

@@ -19,6 +19,7 @@ public class UpdatePostingAction implements IAction {
 	
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
+			request.setCharacterEncoding("utf-8");
 			HttpSession session = request.getSession();
 			if(request.getParameter("pk") != null) {
 				session.setAttribute("pk", request.getParameter("pk"));

@@ -12,6 +12,7 @@ import org.dimigo.vo.UserVO;
 public class ListAction implements IAction {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
+			request.setCharacterEncoding("utf-8");
 			UserService us = new UserService();
 			List<UserVO> l = us.searchUserList();
 			request.setAttribute("list", l);

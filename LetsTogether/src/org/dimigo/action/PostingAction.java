@@ -23,6 +23,8 @@ public class PostingAction implements IAction {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
 			request.setCharacterEncoding("utf-8");
+			response.setContentType("application/json");
+			response.setCharacterEncoding("utf-8");
 			UserVO s = (UserVO)request.getSession().getAttribute("U");
 			String post = request.getParameter("post");
 			String title = request.getParameter("title");

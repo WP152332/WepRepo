@@ -13,6 +13,7 @@ import org.dimigo.vo.UserVO;
 public class PostListAction implements IAction {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
+			request.setCharacterEncoding("utf-8");
 			PostService ps = new PostService();
 			List<PostVO> l = ps.searchPostList();
 			UserVO s = (UserVO)request.getSession().getAttribute("U");
